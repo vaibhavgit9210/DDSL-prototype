@@ -156,4 +156,8 @@ def extract(files):
     )
     import json
     text = next(b.text for b in resp.content if b.type == "text")
-    return json.loads(text)["sheets"]
+    # usage: exact billed tokens for this request (cost transparency per project)
+    usage = {"model": resp.model,
+             "input_tokens": resp.usage.input_tokens,
+             "output_tokens": resp.usage.output_tokens}
+    return json.loads(text)["sheets"], usage

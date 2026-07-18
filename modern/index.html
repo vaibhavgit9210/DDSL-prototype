@@ -393,7 +393,13 @@ async function analyze(files) {
       ? `<div class="warnbox"><b>Needs a manual check</b><ul>${warnings.map(x => `<li>${x}</li>`).join('')}</ul></div>`
       : '';
     render();
-    status('ok', `Done — ${order.size} quantities filled from the drawings. Review each line, then order.`);
+    let costNote = '';
+    if (result.usage) {  // live backend reports exact billed tokens per analysis
+      const u = result.usage;
+      const usd = (u.input_tokens * 5 + u.output_tokens * 25) / 1e6; // Opus-tier list rates
+      costNote = ` AI usage: ${(u.input_tokens + u.output_tokens).toLocaleString('en-IN')} tokens ≈ ₹${Math.ceil(usd * 96)}.`;
+    }
+    status('ok', `Done — ${order.size} quantities filled from the drawings.${costNote} Review each line, then order.`);
   } catch (err) {
     status('err', 'Could not analyse: ' + err.message);
   }

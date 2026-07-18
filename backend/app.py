@@ -64,11 +64,24 @@ async def analyze(files: list[UploadFile] = File(...)):
         vision_files.append((name, data))
 
     sheets = list(cad_sheets)
+    usage = None
     if vision_files:
         try:
-            sheets.extend(extraction.extract(vision_files))
+            extracted, usage = extraction.extract(vision_files)
+            sheets.extend(extracted)
         except Exception as e:  # surface model/auth errors clearly to the UI
             raise HTTPException(502, f"vision extraction failed: {e}")
 
     line_items, warnings = calc_engine.process(sheets)
-    return {"line_items": line_items, "warnings": warnings, "sheets": sheets}
+
+    # Append per-request usage to usage.jsonl so cost per project is auditable.
+    if usage is not None:
+        import datetime
+        import json as _json
+        with open(os.path.join(os.path.dirname(__file__), "usage.jsonl"), "a") as fh:
+            fh.write(_json.dumps({
+                "at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                "files": [f.filename for f in files], **usage}) + "\n")
+
+    return {"line_items": line_items, "warnings": warnings, "sheets": sheets,
+            "usage": usage}
