@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDSL — AI Drawing Analysis Prototype</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f7f6f3; color: #14161a; min-height: 100vh;
+         font: 15px/1.55 "Helvetica Neue", Helvetica, Arial, sans-serif;
+         display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .box { max-width: 760px; width: 100%; }
+  h1 { font-size: 22px; letter-spacing: .02em; }
+  .sub { color: #6b7076; margin: 8px 0 28px; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  a.card { display: block; background: #fff; border: 1px solid #e3e1db; padding: 22px;
+           text-decoration: none; color: inherit; transition: border-color .15s; }
+  a.card:hover { border-color: #14161a; }
+  .tag { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #6b7076; }
+  a.card h2 { font-size: 16px; margin: 8px 0 6px; }
+  a.card p { font-size: 13px; color: #6b7076; }
+  .note { margin-top: 26px; font-size: 12.5px; color: #6b7076; border-top: 1px solid #e3e1db;
+          padding-top: 14px; }
+  code { background: #eceae4; padding: 1px 5px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>DDSL — AI Drawing Analysis <span style="color:#c7431f">Prototype</span></h1>
+  <p class="sub">Upload a fit-out drawing set → quantities are read off the sheets →
+     the order form fills itself. Two interface treatments of the same engine:</p>
+  <div class="grid">
+    <a class="card" href="classic/">
+      <span class="tag">View A</span>
+      <h2>Classic</h2>
+      <p>Honors DDSL's current order-form design exactly — the AI analysis is added on top
+         of the familiar catalog page.</p>
+    </a>
+    <a class="card" href="modern/">
+      <span class="tag">View B</span>
+      <h2>Modern</h2>
+      <p>Redesigned review-first flow: 01 upload → 02 verify each detected quantity with its
+         calculation → 03 order. Less, but better.</p>
+    </a>
+  </div>
+  <p class="note">Both pages run in <b>demo mode</b> here (canned result from the Shree Hari
+     Belaganj sample set — no backend needed). To run against the live analysis engine, start
+     <code>backend/</code> locally and open either view with <code>?live</code> appended to the URL.</p>
+</div>
+</body>
+</html>

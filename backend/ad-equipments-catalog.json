@@ -1,0 +1,852 @@
+[
+  {
+    "product_name": "Reception Table",
+    "price": 23000,
+    "display_price": "Rs 23,000",
+    "input_id": "qty_1",
+    "data_price": "23000",
+    "changeQty_id": 1,
+    "right_total_id": "right_total_1",
+    "image_url": "https://ddsl.in/assets/mUpload/17732053162c2db279ee1fedeb327b1c47798e6d21.jpeg"
+  },
+  {
+    "product_name": "Discussion Table",
+    "price": 8500,
+    "display_price": "Rs 8,500",
+    "input_id": "qty_2",
+    "data_price": "8500",
+    "changeQty_id": 2,
+    "right_total_id": "right_total_2",
+    "image_url": "https://ddsl.in/assets/mUpload/1770183350a0975c4888d80c3a42e4eb623044c52f.png"
+  },
+  {
+    "product_name": "Casual Chair",
+    "price": 5940,
+    "display_price": "Rs 5,940",
+    "input_id": "qty_3",
+    "data_price": "5940",
+    "changeQty_id": 3,
+    "right_total_id": "right_total_3",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205367956535585269978f104b89a6d5195c9f.jpeg"
+  },
+  {
+    "product_name": "Task Chair",
+    "price": 4250,
+    "display_price": "Rs 4,250",
+    "input_id": "qty_4",
+    "data_price": "4250",
+    "changeQty_id": 4,
+    "right_total_id": "right_total_4",
+    "image_url": "https://ddsl.in/assets/mUpload/1770183404b3fd9a85c2f3283a613ca0a2117ded18.png"
+  },
+  {
+    "product_name": "Staff Table 3'-6",
+    "price": 7000,
+    "display_price": "Rs 7,000",
+    "input_id": "qty_5",
+    "data_price": "7000",
+    "changeQty_id": 5,
+    "right_total_id": "right_total_5",
+    "image_url": "https://ddsl.in/assets/mUpload/17701835809a99b6776d06d310038223b0617a03c2.png"
+  },
+  {
+    "product_name": "VIDEO WALL 7'-0",
+    "price": 750,
+    "display_price": "Rs 750",
+    "input_id": "qty_6",
+    "data_price": "750",
+    "changeQty_id": 6,
+    "right_total_id": "right_total_6",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205391b1c8fbf3a2176fd8e602044755bab85d.jpeg"
+  },
+  {
+    "product_name": "ACCESSORIES & MERCHANDISE UNIT (7'-0",
+    "price": 22500,
+    "display_price": "Rs 22,500",
+    "input_id": "qty_7",
+    "data_price": "22500",
+    "changeQty_id": 7,
+    "right_total_id": "right_total_7",
+    "image_url": "https://ddsl.in/assets/mUpload/17732054128c94a38c862732a7ac075edf8e56b600.jpeg"
+  },
+  {
+    "product_name": "GREY LACQUERED GLASS-ACRYLIC LAMINATES",
+    "price": 750,
+    "display_price": "Rs 750",
+    "input_id": "qty_8",
+    "data_price": "750",
+    "changeQty_id": 8,
+    "right_total_id": "right_total_8",
+    "image_url": "https://ddsl.in/assets/mUpload/1770183795fd6534369e80fa0ad3998e8bbd0cf623.jpeg"
+  },
+  {
+    "product_name": "Base for Color Palette (Excluding colour plates)",
+    "price": 14500,
+    "display_price": "Rs 14,500",
+    "input_id": "qty_9",
+    "data_price": "14500",
+    "changeQty_id": 9,
+    "right_total_id": "right_total_9",
+    "image_url": "https://ddsl.in/assets/mUpload/17701838632c93ec35fbbb973dd7760e7fc3a80d90.jpg"
+  },
+  {
+    "product_name": "Mirror on Wall (8'-0",
+    "price": 650,
+    "display_price": "Rs 650",
+    "input_id": "qty_10",
+    "data_price": "650",
+    "changeQty_id": 10,
+    "right_total_id": "right_total_10",
+    "image_url": "https://ddsl.in/assets/mUpload/1770184506ae566253288191ce5d879e51dae1d8c3.jpg"
+  },
+  {
+    "product_name": "WALL PARTITION WOODEN",
+    "price": 550,
+    "display_price": "Rs 550",
+    "input_id": "qty_11",
+    "data_price": "550",
+    "changeQty_id": 11,
+    "right_total_id": "right_total_11",
+    "image_url": "https://ddsl.in/assets/mUpload/17732054676e24c12bcc4e3cf30127d8ca111a8702.jpeg"
+  },
+  {
+    "product_name": "KAJARIA DELPHI NERO",
+    "price": 130,
+    "display_price": "Rs 130",
+    "input_id": "qty_12",
+    "data_price": "130",
+    "changeQty_id": 12,
+    "right_total_id": "right_total_12",
+    "image_url": "https://ddsl.in/assets/mUpload/17701845967049b7b80f22a63bcfa2a6883ad879f3.jpg"
+  },
+  {
+    "product_name": "KAJARIA DELPHI GREY",
+    "price": 125,
+    "display_price": "Rs 125",
+    "input_id": "qty_13",
+    "data_price": "125",
+    "changeQty_id": 13,
+    "right_total_id": "right_total_13",
+    "image_url": "https://ddsl.in/assets/mUpload/1770184708912dee52e65c1856c828f7ddea44b30b.png"
+  },
+  {
+    "product_name": "ABSOLUTE BLACK GRANITE",
+    "price": 220,
+    "display_price": "Rs 220",
+    "input_id": "qty_14",
+    "data_price": "220",
+    "changeQty_id": 14,
+    "right_total_id": "right_total_14",
+    "image_url": "https://ddsl.in/assets/mUpload/17701848397881eb85ba8e25aa9e0ab08bd641b368.png"
+  },
+  {
+    "product_name": "Door",
+    "price": 13500,
+    "display_price": "Rs 13,500",
+    "input_id": "qty_15",
+    "data_price": "13500",
+    "changeQty_id": 15,
+    "right_total_id": "right_total_15",
+    "image_url": "https://ddsl.in/assets/mUpload/17732220738180589d56f15418b5997988eb6dde06.jpeg"
+  },
+  {
+    "product_name": "Door With Glass",
+    "price": 17000,
+    "display_price": "Rs 17,000",
+    "input_id": "qty_16",
+    "data_price": "17000",
+    "changeQty_id": 16,
+    "right_total_id": "right_total_16",
+    "image_url": "https://ddsl.in/assets/mUpload/1773222111c62c10dc06d8fb1ae4fcbd36032b12e0.jpeg"
+  },
+  {
+    "product_name": "PAINTING",
+    "price": 28,
+    "display_price": "Rs 28",
+    "input_id": "qty_17",
+    "data_price": "28",
+    "changeQty_id": 17,
+    "right_total_id": "right_total_17",
+    "image_url": "https://ddsl.in/assets/mUpload/177322298940549d85cba2a5c5f5d0e0cd0cd10fe7.png"
+  },
+  {
+    "product_name": "FALSE CELING",
+    "price": 75,
+    "display_price": "Rs 75",
+    "input_id": "qty_18",
+    "data_price": "75",
+    "changeQty_id": 18,
+    "right_total_id": "right_total_18",
+    "image_url": "https://ddsl.in/assets/mUpload/17732230710d89841417b66c5302f83436c39dbfb3.jpeg"
+  },
+  {
+    "product_name": "FALSE CEILING REMOVAL",
+    "price": 20,
+    "display_price": "Rs 20",
+    "input_id": "qty_19",
+    "data_price": "20",
+    "changeQty_id": 19,
+    "right_total_id": "right_total_19",
+    "image_url": "https://ddsl.in/assets/mUpload/1773223223080ce6401f2448da101a3f7debf518b5.jpg"
+  },
+  {
+    "product_name": "PANASONIC PDLM12204 15W TEMP-4000K",
+    "price": 480,
+    "display_price": "Rs 480",
+    "input_id": "qty_20",
+    "data_price": "480",
+    "changeQty_id": 20,
+    "right_total_id": "right_total_20",
+    "image_url": "https://ddsl.in/assets/mUpload/1770184951bf693eb6a478b13473b0fec85ee5c8ee.png"
+  },
+  {
+    "product_name": "PENDENT",
+    "price": 1950,
+    "display_price": "Rs 1,950",
+    "input_id": "qty_21",
+    "data_price": "1950",
+    "changeQty_id": 21,
+    "right_total_id": "right_total_21",
+    "image_url": "https://ddsl.in/assets/mUpload/17701849813d881585f31365404fdc3e256676d2a4.jpg"
+  },
+  {
+    "product_name": "TRACK LIGHT",
+    "price": 1870,
+    "display_price": "Rs 1,870",
+    "input_id": "qty_22",
+    "data_price": "1870",
+    "changeQty_id": 22,
+    "right_total_id": "right_total_22",
+    "image_url": "https://ddsl.in/assets/mUpload/1770185031e062cf77c476865abdcb63adf3ed24dd.jpg"
+  },
+  {
+    "product_name": "PROFILE LIGHT",
+    "price": 3,
+    "display_price": "Rs 3",
+    "input_id": "qty_23",
+    "data_price": "3",
+    "changeQty_id": 23,
+    "right_total_id": "right_total_23",
+    "image_url": "https://ddsl.in/assets/mUpload/1773222384d942f7312d53ff40225f9e5b2ac35fb5.jpg"
+  },
+  {
+    "product_name": "STRIP LIGHT",
+    "price": 2,
+    "display_price": "Rs 2",
+    "input_id": "qty_24",
+    "data_price": "2",
+    "changeQty_id": 24,
+    "right_total_id": "right_total_24",
+    "image_url": "https://ddsl.in/assets/mUpload/17701850846fc938e8f8d79344d9d4cd95ece45d3e.jpg"
+  },
+  {
+    "product_name": "SWITCH AND SOCKET-MCB",
+    "price": 0,
+    "display_price": "Rs 0",
+    "input_id": "qty_25",
+    "data_price": "0",
+    "changeQty_id": 25,
+    "right_total_id": "right_total_25",
+    "image_url": "https://ddsl.in/assets/mUpload/17701852237881eb85ba8e25aa9e0ab08bd641b368.png"
+  },
+  {
+    "product_name": "Electrician",
+    "price": 35,
+    "display_price": "Rs 35",
+    "input_id": "qty_26",
+    "data_price": "35",
+    "changeQty_id": 26,
+    "right_total_id": "right_total_26",
+    "image_url": "https://ddsl.in/assets/mUpload/17732224975334a28e8dfb7ab38a478d9169ef118a.png"
+  },
+  {
+    "product_name": "ACP",
+    "price": 250,
+    "display_price": "Rs 250",
+    "input_id": "qty_27",
+    "data_price": "250",
+    "changeQty_id": 27,
+    "right_total_id": "right_total_27",
+    "image_url": "https://ddsl.in/assets/mUpload/17732055101dee2f61f7b33bc37019d8c4a8fcd7c4.jpeg"
+  },
+  {
+    "product_name": "Glass Door (7' x 3') with hardwarwe",
+    "price": 24900,
+    "display_price": "Rs 24,900",
+    "input_id": "qty_28",
+    "data_price": "24900",
+    "changeQty_id": 28,
+    "right_total_id": "right_total_28",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205778e3c43fb8ccdbc23809db5e36d5939fc8.jpeg"
+  },
+  {
+    "product_name": "Glass Partation Normal",
+    "price": 360,
+    "display_price": "Rs 360",
+    "input_id": "qty_29",
+    "data_price": "360",
+    "changeQty_id": 29,
+    "right_total_id": "right_total_29",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205707e3d17ef4bdc0930b3a06a66d9bc75cf8.jpeg"
+  },
+  {
+    "product_name": "Reception Table",
+    "price": 21500,
+    "display_price": "Rs 21,500",
+    "input_id": "qty_30",
+    "data_price": "21500",
+    "changeQty_id": 30,
+    "right_total_id": "right_total_30",
+    "image_url": "https://ddsl.in/assets/mUpload/17732057337e99dcc48a8b2e2de9cac6afdc484949.jpeg"
+  },
+  {
+    "product_name": "Waiting Bench",
+    "price": 11000,
+    "display_price": "Rs 11,000",
+    "input_id": "qty_31",
+    "data_price": "11000",
+    "changeQty_id": 31,
+    "right_total_id": "right_total_31",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205836e2c8bd75d5664a6f47ec925afdb366de.jpeg"
+  },
+  {
+    "product_name": "Staff Table 3'-6\" x2'",
+    "price": 5000,
+    "display_price": "Rs 5,000",
+    "input_id": "qty_32",
+    "data_price": "5000",
+    "changeQty_id": 32,
+    "right_total_id": "right_total_32",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Podium",
+    "price": 14500,
+    "display_price": "Rs 14,500",
+    "input_id": "qty_33",
+    "data_price": "14500",
+    "changeQty_id": 33,
+    "right_total_id": "right_total_33",
+    "image_url": "https://ddsl.in/assets/mUpload/1773205945926575ca781bd824695bf1ccdc38b0c5.jpeg"
+  },
+  {
+    "product_name": "Centre Table (2' X 2')",
+    "price": 5800,
+    "display_price": "Rs 5,800",
+    "input_id": "qty_34",
+    "data_price": "5800",
+    "changeQty_id": 34,
+    "right_total_id": "right_total_34",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "GREY VIDEO WALL",
+    "price": 750,
+    "display_price": "Rs 750",
+    "input_id": "qty_35",
+    "data_price": "750",
+    "changeQty_id": 35,
+    "right_total_id": "right_total_35",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "SERVICE BACKDROP",
+    "price": 750,
+    "display_price": "Rs 750",
+    "input_id": "qty_36",
+    "data_price": "750",
+    "changeQty_id": 36,
+    "right_total_id": "right_total_36",
+    "image_url": "https://ddsl.in/assets/mUpload/1773221527ba14a4cbe18e0a3517b8c06ee4ddbc4f.jpeg"
+  },
+  {
+    "product_name": "Mission Wall",
+    "price": 490,
+    "display_price": "Rs 490",
+    "input_id": "qty_37",
+    "data_price": "490",
+    "changeQty_id": 37,
+    "right_total_id": "right_total_37",
+    "image_url": "https://ddsl.in/assets/mUpload/17732225576b4eb80bb4d87b9f1345a7a996affafa.jpeg"
+  },
+  {
+    "product_name": "WALL WOODEN CLADDING",
+    "price": 650,
+    "display_price": "Rs 650",
+    "input_id": "qty_38",
+    "data_price": "650",
+    "changeQty_id": 38,
+    "right_total_id": "right_total_38",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "DETAILING WALL",
+    "price": 630,
+    "display_price": "Rs 630",
+    "input_id": "qty_39",
+    "data_price": "630",
+    "changeQty_id": 39,
+    "right_total_id": "right_total_39",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "KAJARIA DELPHI GREY",
+    "price": 125,
+    "display_price": "Rs 125",
+    "input_id": "qty_40",
+    "data_price": "125",
+    "changeQty_id": 40,
+    "right_total_id": "right_total_40",
+    "image_url": "https://ddsl.in/assets/mUpload/1773223301a0e26f2fbde981c064f113a571a46dca.jpg"
+  },
+  {
+    "product_name": "KAJARIA COOL GRIS",
+    "price": 130,
+    "display_price": "Rs 130",
+    "input_id": "qty_41",
+    "data_price": "130",
+    "changeQty_id": 41,
+    "right_total_id": "right_total_41",
+    "image_url": "https://ddsl.in/assets/mUpload/17732234824080bc0be9c341cdd9e836a331fd1aa7.jpeg"
+  },
+  {
+    "product_name": "JOHNSON ENDURA GREY PLUS 12 MM",
+    "price": 110,
+    "display_price": "Rs 110",
+    "input_id": "qty_42",
+    "data_price": "110",
+    "changeQty_id": 42,
+    "right_total_id": "right_total_42",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "JOHNSON ENDURA GREY PLUS 10 MM",
+    "price": 120,
+    "display_price": "Rs 120",
+    "input_id": "qty_43",
+    "data_price": "120",
+    "changeQty_id": 43,
+    "right_total_id": "right_total_43",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "JOHNSON ENDURA YELLOW PLUS 12 MM",
+    "price": 140,
+    "display_price": "Rs 140",
+    "input_id": "qty_44",
+    "data_price": "140",
+    "changeQty_id": 44,
+    "right_total_id": "right_total_44",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "TERRA GREY",
+    "price": 140,
+    "display_price": "Rs 140",
+    "input_id": "qty_45",
+    "data_price": "140",
+    "changeQty_id": 45,
+    "right_total_id": "right_total_45",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "ABSOLUTE BLACK GRANITE",
+    "price": 220,
+    "display_price": "Rs 220",
+    "input_id": "qty_46",
+    "data_price": "220",
+    "changeQty_id": 46,
+    "right_total_id": "right_total_46",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "KAJARIA AKASA PINE",
+    "price": 150,
+    "display_price": "Rs 150",
+    "input_id": "qty_47",
+    "data_price": "150",
+    "changeQty_id": 47,
+    "right_total_id": "right_total_47",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Door",
+    "price": 10500,
+    "display_price": "Rs 10,500",
+    "input_id": "qty_48",
+    "data_price": "10500",
+    "changeQty_id": 48,
+    "right_total_id": "right_total_48",
+    "image_url": "https://ddsl.in/assets/mUpload/1773222699764be307df57598d4c12536f53fa243f.jpeg"
+  },
+  {
+    "product_name": "Door With Glass",
+    "price": 13500,
+    "display_price": "Rs 13,500",
+    "input_id": "qty_49",
+    "data_price": "13500",
+    "changeQty_id": 49,
+    "right_total_id": "right_total_49",
+    "image_url": "https://ddsl.in/assets/mUpload/1773207710b3e6b37adf1779a2b6022bcd452f3c5e.jpeg"
+  },
+  {
+    "product_name": "PAINTING",
+    "price": 30,
+    "display_price": "Rs 30",
+    "input_id": "qty_50",
+    "data_price": "30",
+    "changeQty_id": 50,
+    "right_total_id": "right_total_50",
+    "image_url": "https://ddsl.in/assets/mUpload/177322295740549d85cba2a5c5f5d0e0cd0cd10fe7.png"
+  },
+  {
+    "product_name": "FALSE CELING",
+    "price": 75,
+    "display_price": "Rs 75",
+    "input_id": "qty_51",
+    "data_price": "75",
+    "changeQty_id": 51,
+    "right_total_id": "right_total_51",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "PANASONIC PDLM12204 15 W TEMP-6500 K",
+    "price": 480,
+    "display_price": "Rs 480",
+    "input_id": "qty_52",
+    "data_price": "480",
+    "changeQty_id": 52,
+    "right_total_id": "right_total_52",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "PROFILE LIGHT",
+    "price": 3,
+    "display_price": "Rs 3",
+    "input_id": "qty_53",
+    "data_price": "3",
+    "changeQty_id": 53,
+    "right_total_id": "right_total_53",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "STRIP LIGHT",
+    "price": 2,
+    "display_price": "Rs 2",
+    "input_id": "qty_54",
+    "data_price": "2",
+    "changeQty_id": 54,
+    "right_total_id": "right_total_54",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Linear Suspended Light",
+    "price": 2600,
+    "display_price": "Rs 2,600",
+    "input_id": "qty_55",
+    "data_price": "2600",
+    "changeQty_id": 55,
+    "right_total_id": "right_total_55",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "SWITCH AND SOCKET-MCB",
+    "price": 0,
+    "display_price": "Rs 0",
+    "input_id": "qty_56",
+    "data_price": "0",
+    "changeQty_id": 56,
+    "right_total_id": "right_total_56",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Batten Light",
+    "price": 850,
+    "display_price": "Rs 850",
+    "input_id": "qty_57",
+    "data_price": "850",
+    "changeQty_id": 57,
+    "right_total_id": "right_total_57",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Electrician",
+    "price": 35,
+    "display_price": "Rs 35",
+    "input_id": "qty_58",
+    "data_price": "35",
+    "changeQty_id": 58,
+    "right_total_id": "right_total_58",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "ACP",
+    "price": 240,
+    "display_price": "Rs 240",
+    "input_id": "qty_59",
+    "data_price": "240",
+    "changeQty_id": 59,
+    "right_total_id": "right_total_59",
+    "image_url": "https://ddsl.in/assets/mUpload/1773222763151451108b7a491ed9202cdea8985ef6.jpeg"
+  },
+  {
+    "product_name": "Glass Door (7' x 3') with hardwarwe",
+    "price": 24900,
+    "display_price": "Rs 24,900",
+    "input_id": "qty_60",
+    "data_price": "24900",
+    "changeQty_id": 60,
+    "right_total_id": "right_total_60",
+    "image_url": "https://ddsl.in/assets/mUpload/1773222652a49d6061b746e0b16cedada9e72354e1.jpeg"
+  },
+  {
+    "product_name": "Glass Partation Normal",
+    "price": 370,
+    "display_price": "Rs 370",
+    "input_id": "qty_61",
+    "data_price": "370",
+    "changeQty_id": 61,
+    "right_total_id": "right_total_61",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Customer Escalation Matrix",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_62",
+    "data_price": "925",
+    "changeQty_id": 62,
+    "right_total_id": "right_total_62",
+    "image_url": "https://ddsl.in/assets/mUpload/177320618157d953ace022c226578b29d4dd9069a1.jpeg"
+  },
+  {
+    "product_name": "Digital Connect",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_63",
+    "data_price": "925",
+    "changeQty_id": 63,
+    "right_total_id": "right_total_63",
+    "image_url": "https://ddsl.in/assets/mUpload/17732077554dd00e4dd0a0d8607dca53b3a859da02.jpeg"
+  },
+  {
+    "product_name": "We Care",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_64",
+    "data_price": "925",
+    "changeQty_id": 64,
+    "right_total_id": "right_total_64",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "One App",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_65",
+    "data_price": "925",
+    "changeQty_id": 65,
+    "right_total_id": "right_total_65",
+    "image_url": "https://ddsl.in/assets/mUpload/17732077886c86d2289c3f4cdf079cd32739a75f4e.jpeg"
+  },
+  {
+    "product_name": "Washing Advantage",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_66",
+    "data_price": "925",
+    "changeQty_id": 66,
+    "right_total_id": "right_total_66",
+    "image_url": "https://ddsl.in/assets/mUpload/17732064810ccffe5f11de0c5cbfa83dd3b5e68424.jpeg"
+  },
+  {
+    "product_name": "Joy Ride",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_67",
+    "data_price": "925",
+    "changeQty_id": 67,
+    "right_total_id": "right_total_67",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Goodlife",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_68",
+    "data_price": "925",
+    "changeQty_id": 68,
+    "right_total_id": "right_total_68",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Workshop Timing Board",
+    "price": 2500,
+    "display_price": "Rs 2,500",
+    "input_id": "qty_69",
+    "data_price": "2500",
+    "changeQty_id": 69,
+    "right_total_id": "right_total_69",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Engine Exploded Sectional View",
+    "price": 13500,
+    "display_price": "Rs 13,500",
+    "input_id": "qty_70",
+    "data_price": "13500",
+    "changeQty_id": 70,
+    "right_total_id": "right_total_70",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "New Vehicle Delivery Backdrop",
+    "price": 925,
+    "display_price": "Rs 925",
+    "input_id": "qty_71",
+    "data_price": "925",
+    "changeQty_id": 71,
+    "right_total_id": "right_total_71",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Letterhead",
+    "price": 3,
+    "display_price": "Rs 3",
+    "input_id": "qty_72",
+    "data_price": "3",
+    "changeQty_id": 72,
+    "right_total_id": "right_total_72",
+    "image_url": "https://ddsl.in/assets/mUpload/17732064123a4f22d89e57da2098de3e5f8df7b483.jpeg"
+  },
+  {
+    "product_name": "Envelope",
+    "price": 3,
+    "display_price": "Rs 3",
+    "input_id": "qty_73",
+    "data_price": "3",
+    "changeQty_id": 73,
+    "right_total_id": "right_total_73",
+    "image_url": "https://ddsl.in/assets/mUpload/1773221660d96af56cc9abba48841228c19b637df8.jpeg"
+  },
+  {
+    "product_name": "Visiting Card",
+    "price": 3,
+    "display_price": "Rs 3",
+    "input_id": "qty_74",
+    "data_price": "3",
+    "changeQty_id": 74,
+    "right_total_id": "right_total_74",
+    "image_url": "https://ddsl.in/assets/mUpload/177322160857ebaea2dbf08777725d4e84f2bf835d.jpeg"
+  },
+  {
+    "product_name": "Identity Card",
+    "price": 11000,
+    "display_price": "Rs 11,000",
+    "input_id": "qty_75",
+    "data_price": "11000",
+    "changeQty_id": 75,
+    "right_total_id": "right_total_75",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Colour Palette Logo",
+    "price": 1650,
+    "display_price": "Rs 1,650",
+    "input_id": "qty_76",
+    "data_price": "1650",
+    "changeQty_id": 76,
+    "right_total_id": "right_total_76",
+    "image_url": "https://ddsl.in/assets/mUpload/1773207997ed52320bbc0284a146baa6605caee9b1.jpeg"
+  },
+  {
+    "product_name": "Grey Acrylic Wall Logo",
+    "price": 3900,
+    "display_price": "Rs 3,900",
+    "input_id": "qty_77",
+    "data_price": "3900",
+    "changeQty_id": 77,
+    "right_total_id": "right_total_77",
+    "image_url": "https://ddsl.in/assets/mUpload/17732215714b627e16c83736eef295454b18201a60.jpeg"
+  },
+  {
+    "product_name": "Service Reception Backdrop",
+    "price": 4900,
+    "display_price": "Rs 4,900",
+    "input_id": "qty_78",
+    "data_price": "4900",
+    "changeQty_id": 78,
+    "right_total_id": "right_total_78",
+    "image_url": "https://ddsl.in/assets/mUpload/177320631049309c09d328bd27b989a2bbbacbc9b6.jpeg"
+  },
+  {
+    "product_name": "Acrylic Service Signage with Light",
+    "price": 13500,
+    "display_price": "Rs 13,500",
+    "input_id": "qty_79",
+    "data_price": "13500",
+    "changeQty_id": 79,
+    "right_total_id": "right_total_79",
+    "image_url": "https://ddsl.in/assets/mUpload/177320793190a6d40e1b9bd17523a7658bcdebeaee.jpeg"
+  },
+  {
+    "product_name": "Service Information Board- With Light",
+    "price": 8750,
+    "display_price": "Rs 8,750",
+    "input_id": "qty_81",
+    "data_price": "8750",
+    "changeQty_id": 81,
+    "right_total_id": "right_total_81",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "MAKE NEW TRACK ACRYLIC CUTOUT FOR ACCESSORIES AND MERCHANDISE CABINET.",
+    "price": 1500,
+    "display_price": "Rs 1,500",
+    "input_id": "qty_82",
+    "data_price": "1500",
+    "changeQty_id": 82,
+    "right_total_id": "right_total_82",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Mission Wall- Letters",
+    "price": 3750,
+    "display_price": "Rs 3,750",
+    "input_id": "qty_83",
+    "data_price": "3750",
+    "changeQty_id": 83,
+    "right_total_id": "right_total_83",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Podium Logo",
+    "price": 1500,
+    "display_price": "Rs 1,500",
+    "input_id": "qty_84",
+    "data_price": "1500",
+    "changeQty_id": 84,
+    "right_total_id": "right_total_84",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  },
+  {
+    "product_name": "Reception Table Logo",
+    "price": 1250,
+    "display_price": "Rs 1,250",
+    "input_id": "qty_85",
+    "data_price": "1250",
+    "changeQty_id": 85,
+    "right_total_id": "right_total_85",
+    "image_url": "https://ddsl.in/assets/mUpload/17732056007e99dcc48a8b2e2de9cac6afdc484949.jpeg"
+  },
+  {
+    "product_name": "Grey Internal Signage | Sales and Service | 31 Pcs",
+    "price": 17500,
+    "display_price": "Rs 17,500",
+    "input_id": "qty_86",
+    "data_price": "17500",
+    "changeQty_id": 86,
+    "right_total_id": "right_total_86",
+    "image_url": "https://fl-1.cdn.flockler.com/embed/no-image.svg"
+  }
+]
