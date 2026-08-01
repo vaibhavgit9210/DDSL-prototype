@@ -19,9 +19,18 @@ Landing page: [`index.html`](index.html)
 Both views are **LIVE by default** — including the hosted GitHub Pages copy. Uploads
 are rasterised in the browser (pdf.js, vendored in `assets/vendor/`), sent to the
 `ddsl-brain` Cloudflare Worker at `https://ddsl-brain.vaibhavpro9210.workers.dev/analyze`,
-read by Claude vision through the Aerolink gateway, and priced by the deterministic
-calc engine. Different drawings give different totals; failures surface as errors,
-never as canned numbers.
+read by AI vision, and priced by the deterministic calc engine. Different drawings give
+different totals; failures surface as errors, never as canned numbers.
+
+The worker cascades through vision engines (`GET /health` lists what's active):
+
+1. **Claude via Aerolink** (`ANTHROPIC_API_KEY` secret) — best reader; paid, currently
+   out of balance.
+2. **Gemini free tier** (`GEMINI_API_KEY` secret, aistudio.google.com) — good document
+   reader, free ~250 req/day; used automatically once the secret is set.
+3. **Workers AI llama-4-scout** (keyless `[ai]` binding) — always available. Its vision
+   resolution can't resolve small legend-table digits, so it typically identifies the
+   products and emits per-row "enter the sqft manually" warnings rather than quantities.
 
 - `?mock` (or `?demo`) — canned Shree Hari Belaganj result, no backend touched.
 - `?testpdf=<url>` — fetches a drawing and runs it through the real pipeline (dev hook).
@@ -55,7 +64,7 @@ assets/mock.js          Canned demo result
 assets/prep.js          Browser-side upload prep: PDF → page PNGs via pdf.js
 assets/vendor/          Vendored pdf.js (no CDN)
 worker/worker.js        ddsl-brain Cloudflare Worker — POST /analyze (JSON),
-                        Claude vision via Aerolink + rate limits (KV)
+                        Claude → Gemini → Workers AI cascade + rate limits (KV)
 worker/calc.js          JS port of calc_engine.py (kept in behavioural lockstep)
 backend/app.py          FastAPI — POST /analyze (multipart) — local dev
 backend/extraction.py   Vision model → structured sheets JSON
@@ -68,9 +77,13 @@ backend/dwg_parser.py   DWG/DXF → exact counts/areas via ezdxf (authoritative)
 ```bash
 cd worker
 npx wrangler secret put ANTHROPIC_API_KEY   # Aerolink key (same as backend/.env)
+npx wrangler secret put GEMINI_API_KEY      # optional — enables the free Gemini engine
 npx wrangler secret put IP_SALT             # any random string
 npx wrangler deploy
 ```
+
+Keys live ONLY as wrangler secrets (server-side). Nothing key-shaped ever goes in this
+repo or reaches the browser — GitHub Pages stays fully static.
 
 ## Security — where the API key lives
 

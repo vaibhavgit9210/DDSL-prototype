@@ -3,7 +3,8 @@
 // PDFs are rasterised page-by-page in the browser with pdf.js (vendored in
 // assets/vendor/ — no CDN), so the worker never has to parse a PDF.
 
-const PREP_TARGET_PX = 2200;      // long edge of a rendered PDF page
+const PREP_TARGET_PX = 3000;      // long edge of a rendered PDF page — legend
+                                  // tables on A1/A3 sheets carry tiny text
 const PREP_MAX_PAGES = 24;        // matches the worker's per-request cap
 
 let _pdfjs = null;

@@ -58,6 +58,11 @@ def process(sheets):
             wastage = (row.get("wastage_pct") or 0) / 100.0
             base = (row.get("area_workshop_sqft") or 0) + (row.get("area_showroom_sqft") or 0)
             if base <= 0:
+                # Recognised product but no readable area: surface it instead of
+                # silently dropping a big-ticket line (weak vision models hit this).
+                if spec:
+                    warnings.append(f"[{title}] tile '{spec}' ({row.get('code','?')}) recognised "
+                                    f"but its printed area could not be read — enter the sqft manually.")
                 continue
             qty = _round_qty(base * (1 + wastage))
             if not sku:

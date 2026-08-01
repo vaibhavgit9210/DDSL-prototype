@@ -128,7 +128,13 @@ export function process(sheets) {
       const sku = match(spec, TILE_KEYWORDS);
       const wastage = (row.wastage_pct || 0) / 100.0;
       const base = (row.area_workshop_sqft || 0) + (row.area_showroom_sqft || 0);
-      if (base <= 0) continue;
+      if (base <= 0) {
+        // Recognised product but no readable area: surface it instead of
+        // silently dropping a big-ticket line (weak vision models hit this).
+        if (spec) warnings.push(`[${title}] tile '${spec}' (${row.code ?? '?'}) recognised ` +
+          'but its printed area could not be read — enter the sqft manually.');
+        continue;
+      }
       const qty = roundQty(base * (1 + wastage));
       if (!sku) {
         warnings.push(`[${title}] tile '${spec}' (${row.code ?? '?'}) ` +
