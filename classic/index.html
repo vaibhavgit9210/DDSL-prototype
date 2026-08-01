@@ -56,7 +56,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
             </svg>
             <p class="text-gray-600 font-medium">Drop the drawing set here or click to upload</p>
-            <p class="text-gray-400 text-sm mt-1">PDF, PNG, JPG, DWG, DXF — select all sheets at once</p>
+            <p class="text-gray-400 text-sm mt-1">PDF, PNG, JPG — select all sheets at once (for DWG, upload the PDF export)</p>
         </div>
         <!-- Analysis Status -->
         <div id="analysisStatus" class="hidden mt-3 p-4 rounded-lg bg-blue-50 border border-blue-200">
@@ -139,17 +139,17 @@
         </div>
     </div>
 
+    <script src="../assets/prep.js"></script>
     <script>
     // ===== CONFIGURATION =====
-    // Point this at the DDSL analysis backend (ddsl-ai/backend, POST /analyze).
+    // LIVE by default: uploads go to the ddsl-brain worker (Claude vision +
+    // deterministic calc; the API key stays server-side as a wrangler secret).
     // Overridable without editing the file: localStorage.setItem('DDSL_API_URL', 'https://.../analyze')
-    const API_URL = localStorage.getItem('DDSL_API_URL') || 'http://localhost:8000/analyze';
-    // MOCK_MODE lets the UI be demoed with no backend/API key: it returns a
-    // canned result built from the Shree Hari Belaganj sample set. Set to false
-    // once the backend is live.
-    // MOCK by default (works on GitHub Pages with no backend). Append ?live to the
-    // URL to call the real backend at API_URL.
-    const MOCK_MODE = !new URLSearchParams(location.search).has('live');
+    const API_URL = localStorage.getItem('DDSL_API_URL') || 'https://ddsl-brain.vaibhavpro9210.workers.dev/analyze';
+    // ?mock (or ?demo) shows the canned Shree Hari Belaganj result instead of
+    // analysing the upload — offline demos / screenshots only.
+    const MOCK_MODE = new URLSearchParams(location.search).has('mock')
+                   || new URLSearchParams(location.search).has('demo');
 
     const MOCK_RESULT = {
         line_items: [
@@ -1233,9 +1233,13 @@
                 await new Promise(r => setTimeout(r, 600));
                 result = MOCK_RESULT;
             } else {
-                const formData = new FormData();
-                files.forEach(f => formData.append('files', f));
-                const response = await fetch(API_URL, { method: 'POST', body: formData });
+                const prepped = await prepareFiles(files, m => { statusText.textContent = m; });
+                statusText.textContent = `Reading ${prepped.length} sheet${prepped.length > 1 ? 's' : ''} with AI (30–90s)...`;
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify({ files: prepped }),
+                });
                 if (!response.ok) {
                     let detail = `Server error: ${response.status}`;
                     try { detail = (await response.json()).detail || detail; } catch (_) {}
@@ -1310,6 +1314,8 @@
     // ?demo auto-runs the canned analysis (client demos / screenshots)
     if (MOCK_MODE && new URLSearchParams(location.search).has('demo'))
         analyzeFiles([{ name: 'Shree Hari Belaganj — full sheet set.pdf' }]);
+    // ?testpdf=<url> runs a fetched drawing through the real pipeline (dev/testing)
+    runTestHook(analyzeFiles);
     </script>
 </body>
 </html>

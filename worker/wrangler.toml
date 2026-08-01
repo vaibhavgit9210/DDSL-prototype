@@ -1,0 +1,14 @@
+name = "ddsl-brain"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+ANTHROPIC_BASE_URL = "https://capi.aerolink.lat"
+
+[[kv_namespaces]]
+binding = "DDSL_LIMITS"
+id = "3d9ad7a8c1ff452eb3a580362593aba9"
+
+# Secrets (set via `npx wrangler secret put <NAME>`, never in this file):
+#   ANTHROPIC_API_KEY — required; Aerolink gateway key (same one as backend/.env)
+#   IP_SALT           — required; random string mixed into IP hashes for rate-limit keys

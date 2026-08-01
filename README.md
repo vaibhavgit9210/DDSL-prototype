@@ -14,12 +14,24 @@ string), and auto-fills the DDSL order form.
 
 Landing page: [`index.html`](index.html)
 
-## Demo vs live
+## Live vs demo
 
-Both views default to **MOCK mode** (canned result from the Shree Hari Belaganj sample
-set) so the hosted GitHub Pages copy works with no backend and **no API key**.
+Both views are **LIVE by default** — including the hosted GitHub Pages copy. Uploads
+are rasterised in the browser (pdf.js, vendored in `assets/vendor/`), sent to the
+`ddsl-brain` Cloudflare Worker at `https://ddsl-brain.vaibhavpro9210.workers.dev/analyze`,
+read by Claude vision through the Aerolink gateway, and priced by the deterministic
+calc engine. Different drawings give different totals; failures surface as errors,
+never as canned numbers.
 
-To run live:
+- `?mock` (or `?demo`) — canned Shree Hari Belaganj result, no backend touched.
+- `?testpdf=<url>` — fetches a drawing and runs it through the real pipeline (dev hook).
+- Point a view at another backend with
+  `localStorage.setItem('DDSL_API_URL', 'https://your-host/analyze')`.
+- Worker rate limits (KV): 20 analyses/day per IP hash, 100/day global.
+- **DWG/DXF is not supported by the worker** (no CAD parser in a Worker) — upload the
+  PDF export instead; the UI says so. The local FastAPI backend still parses DXF.
+
+The original FastAPI backend still works for local dev:
 
 ```bash
 cd backend
@@ -30,9 +42,9 @@ export $(grep -v '^#' .env | xargs)
 uvicorn app:app --port 8000
 ```
 
-then open a view with `?live` appended (e.g. `classic/index.html?live`).
-Point the frontend at a non-localhost backend with:
-`localStorage.setItem('DDSL_API_URL', 'https://your-host/analyze')`.
+then `localStorage.setItem('DDSL_API_URL', 'http://localhost:8000/analyze')` —
+note the localhost backend expects multipart while the worker takes JSON, so use
+matching frontend code (the worker contract is what's deployed).
 
 ## Architecture
 
@@ -40,16 +52,31 @@ Point the frontend at a non-localhost backend with:
 classic/ | modern/      Frontends (static, host anywhere)
 assets/catalog.js       DDSL product catalog (shared)
 assets/mock.js          Canned demo result
-backend/app.py          FastAPI — POST /analyze (multipart)
+assets/prep.js          Browser-side upload prep: PDF → page PNGs via pdf.js
+assets/vendor/          Vendored pdf.js (no CDN)
+worker/worker.js        ddsl-brain Cloudflare Worker — POST /analyze (JSON),
+                        Claude vision via Aerolink + rate limits (KV)
+worker/calc.js          JS port of calc_engine.py (kept in behavioural lockstep)
+backend/app.py          FastAPI — POST /analyze (multipart) — local dev
 backend/extraction.py   Vision model → structured sheets JSON
 backend/calc_engine.py  Sheets → catalog line items (all arithmetic in code)
 backend/dwg_parser.py   DWG/DXF → exact counts/areas via ezdxf (authoritative)
 ```
 
+### Deploying the worker
+
+```bash
+cd worker
+npx wrangler secret put ANTHROPIC_API_KEY   # Aerolink key (same as backend/.env)
+npx wrangler secret put IP_SALT             # any random string
+npx wrangler deploy
+```
+
 ## Security — where the API key lives
 
-- The key lives **only** in `backend/.env` on the machine running the backend.
-  `.env` is gitignored and must never be committed.
+- The key lives **only** in `backend/.env` (local dev) and as a **wrangler secret**
+  on the `ddsl-brain` worker (hosted demo). `.env` is gitignored and must never be
+  committed; the secret never appears in the repo or the browser.
 - **Never** put the key in the frontend or in this repo: GitHub Pages is static
   hosting — any key shipped to the browser is public.
 - GitHub **Actions** secrets don't help here either: they protect CI builds, not a

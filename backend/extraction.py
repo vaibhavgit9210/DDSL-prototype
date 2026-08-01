@@ -86,7 +86,13 @@ SCHEMA = {
                             "name": {"type": "string"},
                             "count": {"type": "integer"},
                         }, "required": ["name", "count"]}},
-                    "area_chart": {"type": ["object", "null"], "additionalProperties": True},
+                    # NB: the API rejects additionalProperties:true, so zones are a typed list
+                    "area_chart": {"type": ["array", "null"], "items": {
+                        "type": "object", "additionalProperties": False,
+                        "properties": {
+                            "zone": {"type": "string"},
+                            "sqft": {"type": ["number", "null"]},
+                        }, "required": ["zone"]}},
                     "false_ceiling_area_sqft": {"type": ["number", "null"]},
                     "paint_area_sqft": {"type": ["number", "null"]},
                     "glass_partition_sqft": {"type": ["number", "null"]},

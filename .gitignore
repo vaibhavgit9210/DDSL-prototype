@@ -3,3 +3,6 @@
 .venv/
 __pycache__/
 .DS_Store
+.testdata/
+worker/node_modules/
+worker/.wrangler/

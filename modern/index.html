@@ -174,7 +174,7 @@
       <div class="step-head">
         <span class="step-no">01</span>
         <span class="step-title">Drawings</span>
-        <span class="step-meta">PDF · PNG · JPG · DWG · DXF</span>
+        <span class="step-meta">PDF · PNG · JPG (for DWG, upload the PDF export)</span>
       </div>
       <div class="drop" id="drop" onclick="document.getElementById('fileInput').click()">
         <div class="big">Drop the full sheet set here</div>
@@ -248,12 +248,16 @@
 
 <script src="../assets/catalog.js"></script>
 <script src="../assets/mock.js"></script>
+<script src="../assets/prep.js"></script>
 <script>
 // ===== CONFIG =====
+// LIVE by default: uploads go to the ddsl-brain worker (Claude vision +
+// deterministic calc; the API key stays server-side as a wrangler secret).
 // Overridable without editing the file: localStorage.setItem('DDSL_API_URL', 'https://.../analyze')
-const API_URL = localStorage.getItem('DDSL_API_URL') || 'http://localhost:8000/analyze';
-// MOCK by default (works on GitHub Pages with no backend). Append ?live to call the backend.
-const MOCK_MODE = !new URLSearchParams(location.search).has('live');
+const API_URL = localStorage.getItem('DDSL_API_URL') || 'https://ddsl-brain.vaibhavpro9210.workers.dev/analyze';
+// ?mock (or ?demo) shows the canned result instead of analysing the upload.
+const MOCK_MODE = new URLSearchParams(location.search).has('mock')
+               || new URLSearchParams(location.search).has('demo');
 
 const fmt = n => '₹ ' + n.toLocaleString('en-IN');
 
@@ -370,9 +374,13 @@ async function analyze(files) {
       await new Promise(r => setTimeout(r, 600));
       result = MOCK_RESULT;
     } else {
-      const fd = new FormData();
-      files.forEach(f => fd.append('files', f));
-      const res = await fetch(API_URL, { method: 'POST', body: fd });
+      const prepped = await prepareFiles(files, m => status('', m));
+      status('', `Reading ${prepped.length} sheet${prepped.length > 1 ? 's' : ''} with AI (30–90s)…`);
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ files: prepped }),
+      });
       if (!res.ok) {
         let d = `server error ${res.status}`;
         try { d = (await res.json()).detail || d; } catch (_) {}
@@ -427,6 +435,8 @@ render();
 // ?demo auto-runs the canned analysis (client demos / screenshots)
 if (MOCK_MODE && new URLSearchParams(location.search).has('demo'))
   analyze([{ name: 'Shree Hari Belaganj — full sheet set.pdf' }]);
+// ?testpdf=<url> runs a fetched drawing through the real pipeline (dev/testing)
+runTestHook(analyze);
 </script>
 </body>
 </html>
